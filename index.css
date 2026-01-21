@@ -17,16 +17,17 @@ header div {
   border: black solid 2px;
 }
 section:first-child {
-  height: 600px;
+  height: 700px;
   border: 2px solid black;
+  background-image: url(https://wallpapercat.com/w/full/b/a/9/1209998-3840x2160-desktop-4k-glow-in-the-dark-background-photo.jpg);
+  background-position: center;
+  background-size: cover;
 }
 section:last-child {
   height: 1000px;
   border: 2px solid black;
 }
-.lightM{
-    
+.lightM {
 }
-.darkM{
-
+.darkM {
 }
