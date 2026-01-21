@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  width: 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+header div {
+  border: black solid 2px;
+}
+section:first-child {
+  height: 600px;
+  border: 2px solid black;
+}
+section:last-child {
+  height: 1000px;
+  border: 2px solid black;
+}
+.lightM{
+    
+}
+.darkM{
+
+}
