@@ -16,7 +16,11 @@
   <body>
     <header>
       <img src="bilder/quizlogormv.png" alt="" />
-      <div></div>
+      <div class="countdown-header nonenormal">
+        <span id="minutes-header">02</span>
+        <div class="separator-header">:</div>
+        <span id="seconds-header">00</span>
+      </div>
       <div>
         <i
           id="sun-button"
@@ -39,11 +43,20 @@
             <div class="separator">:</div>
             <span id="seconds">00</span>
           </div>
-          <button class="start" onclick="start()">Start countdown</button>
+          <button
+            class="start"
+            onclick="
+              start();
+              quizStart();
+              headerClock();
+            "
+          >
+            Start quizen nå
+          </button>
         </div>
       </section>
       <section>
-        <div class="questionContainer">
+        <div class="questionContainer nonenormal">
           <div>
             <h2>Spørsmål 1</h2>
             <h3>

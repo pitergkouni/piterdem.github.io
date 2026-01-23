@@ -16,6 +16,7 @@ header {
   padding-inline: 50px;
   position: fixed;
   background-color: white;
+  z-index: 1;
 }
 section:first-child {
   height: 800px;
@@ -46,6 +47,10 @@ section:nth-child(2) {
   display: flex;
   font-size: 200px;
 }
+.countdown-header {
+  display: flex;
+  font-size: 50px;
+}
 .questionContainer {
   display: flex;
   flex-direction: column;
@@ -58,6 +63,9 @@ section:nth-child(2) {
 }
 .none {
   display: none !important;
+}
+.nonenormal {
+  display: none;
 }
 .block {
   display: block;

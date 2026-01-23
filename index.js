@@ -8,6 +8,7 @@ buttonElm = document.querySelector("button");
 questionContainer = document.querySelector(".questionContainer");
 inputElm = document.querySelector("input");
 h1Elm = document.querySelector("h1");
+startButtonElm = document.querySelector(".start");
 
 function themeLight() {
   moonButtonElm.classList.replace("none", "block");
@@ -31,6 +32,13 @@ function themeDark() {
   inputElm.style.backgroundColor = "inherit";
   inputElm.style.color = "black";
 }
+function quizStart() {
+  questionContainer.classList.remove("nonenormal");
+  startButtonElm.innerText = "Quizen har startet!";
+}
+function headerClock() {
+  document.querySelector(".countdown-header").classList.remove("nonenormal");
+}
 let sporsmal1 = false;
 let sporsmal2 = false;
 let sporsmal3 = false;
@@ -38,6 +46,8 @@ let sporsmal4 = false;
 let sporsmal5 = false;
 let sporsmal6 = false;
 let sporsmal7 = false;
+const sporsmal8Fasit =
+  'document.getElementById("tittel").innerHTML = "Velkommen!";';
 function sjekkSvar1(x, svar1) {
   const buttons = document.querySelectorAll("button");
   buttons[1].style.backgroundColor = "";
@@ -101,6 +111,7 @@ function sjekkSvar7(x, svar7) {
   x.style.backgroundColor = "gray";
   sporsmal7 = svar7;
 }
+
 const antallriktig = document.getElementById("antallriktig");
 function fasit() {
   let z = 0;
@@ -111,17 +122,18 @@ function fasit() {
   if (sporsmal5 == true) z += 1;
   if (sporsmal6 == true) z += 1;
   if (sporsmal7 == true) z += 1;
+  if (inputElm.value == sporsmal8Fasit) z += 1;
   antallriktig.innerHTML = "Du fikk " + z + "/8 riktig";
 }
 
-countdownContainer = document.querySelector(".countdown-container");
-countdown = document.querySelector(".countdown");
 let minutesElm = document.getElementById("minutes");
 let secondsElm = document.getElementById("seconds");
+let minutesHeaderElm = document.getElementById("minutes-header");
+let secondsHeaderElm = document.getElementById("seconds-header");
 separatorElm = document.querySelector(".separator");
 
 let timeLeft = 120;
-let interval
+let interval;
 function start() {
   if (!interval) {
     interval = setInterval(countDown, 1000);
@@ -133,19 +145,21 @@ function countDown() {
   const seconds = Math.floor(timeLeft % 60);
   if (minutes < 10) {
     minutesElm.textContent = "0" + minutes;
+    minutesHeaderElm.textContent = "0" + minutes;
   } else {
     minutesElm.textContent = minutes;
+    minutesHeaderElm.textContent = minutes;
   }
   if (seconds < 10) {
     secondsElm.textContent = "0" + seconds;
+    secondsHeaderElm.textContent = "0" + seconds;
   } else {
     secondsElm.textContent = seconds;
+    secondsHeaderElm.textContent = seconds;
   }
   if (timeLeft == 0) {
     clearInterval(interval);
     alert("Tiden har gått ut! Sjekk resultatene nederst");
   }
   console.log(timeLeft);
- 
 }
-
