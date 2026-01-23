@@ -40,64 +40,64 @@ let sporsmal6 = false;
 let sporsmal7 = false;
 function sjekkSvar1(x, svar1) {
   const buttons = document.querySelectorAll("button");
-  buttons[0].style.backgroundColor = "";
   buttons[1].style.backgroundColor = "";
   buttons[2].style.backgroundColor = "";
   buttons[3].style.backgroundColor = "";
+  buttons[4].style.backgroundColor = "";
   x.style.backgroundColor = "gray";
   sporsmal1 = svar1;
 }
 function sjekkSvar2(x, svar2) {
   const buttons = document.querySelectorAll("button");
-  buttons[4].style.backgroundColor = "";
   buttons[5].style.backgroundColor = "";
   buttons[6].style.backgroundColor = "";
   buttons[7].style.backgroundColor = "";
+  buttons[8].style.backgroundColor = "";
   x.style.backgroundColor = "gray";
   sporsmal2 = svar2;
 }
 function sjekkSvar3(x, svar3) {
   const buttons = document.querySelectorAll("button");
-  buttons[8].style.backgroundColor = "";
   buttons[9].style.backgroundColor = "";
   buttons[10].style.backgroundColor = "";
   buttons[11].style.backgroundColor = "";
+  buttons[12].style.backgroundColor = "";
   x.style.backgroundColor = "gray";
   sporsmal3 = svar3;
 }
 function sjekkSvar4(x, svar4) {
   const buttons = document.querySelectorAll("button");
-  buttons[12].style.backgroundColor = "";
   buttons[13].style.backgroundColor = "";
   buttons[14].style.backgroundColor = "";
   buttons[15].style.backgroundColor = "";
+  buttons[16].style.backgroundColor = "";
   x.style.backgroundColor = "gray";
   sporsmal4 = svar4;
 }
 function sjekkSvar5(x, svar5) {
   const buttons = document.querySelectorAll("button");
-  buttons[16].style.backgroundColor = "";
   buttons[17].style.backgroundColor = "";
   buttons[18].style.backgroundColor = "";
   buttons[19].style.backgroundColor = "";
+  buttons[20].style.backgroundColor = "";
   x.style.backgroundColor = "gray";
   sporsmal5 = svar5;
 }
 function sjekkSvar6(x, svar6) {
   const buttons = document.querySelectorAll("button");
-  buttons[20].style.backgroundColor = "";
   buttons[21].style.backgroundColor = "";
   buttons[22].style.backgroundColor = "";
   buttons[23].style.backgroundColor = "";
+  buttons[24].style.backgroundColor = "";
   x.style.backgroundColor = "gray";
   sporsmal6 = svar6;
 }
 function sjekkSvar7(x, svar7) {
   const buttons = document.querySelectorAll("button");
-  buttons[24].style.backgroundColor = "";
   buttons[25].style.backgroundColor = "";
   buttons[26].style.backgroundColor = "";
   buttons[27].style.backgroundColor = "";
+  buttons[28].style.backgroundColor = "";
   x.style.backgroundColor = "gray";
   sporsmal7 = svar7;
 }
@@ -121,6 +121,12 @@ let secondsElm = document.getElementById("seconds");
 separatorElm = document.querySelector(".separator");
 
 let timeLeft = 120;
+let interval
+function start() {
+  if (!interval) {
+    interval = setInterval(countDown, 1000);
+  }
+}
 function countDown() {
   timeLeft -= 1;
   const minutes = Math.floor(timeLeft / 60);
@@ -140,5 +146,6 @@ function countDown() {
     alert("Tiden har gått ut! Sjekk resultatene nederst");
   }
   console.log(timeLeft);
+ 
 }
-let interval = setInterval(countDown, 1000);
+
