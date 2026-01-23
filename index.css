@@ -12,22 +12,63 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-}
-header div {
-  border: black solid 2px;
+  width: 100%;
+  padding-inline: 50px;
+  position: fixed;
+  background-color: white;
 }
 section:first-child {
-  height: 700px;
+  height: 800px;
   border: 2px solid black;
   background-image: url(https://wallpapercat.com/w/full/b/a/9/1209998-3840x2160-desktop-4k-glow-in-the-dark-background-photo.jpg);
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 section:last-child {
-  height: 1000px;
+  height: 100%;
   border: 2px solid black;
+  display: flex;
+  justify-content: center;
 }
-.lightM {
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
-.darkM {
+.questionContainer div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.none {
+  display: none !important;
+}
+.block {
+  display: block;
+}
+.moon {
+  color: white;
+}
+header img {
+  width: 50px;
+}
+div img {
+  width: 900px;
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 13px;
+  filter: invert(100%);
+}
+button {
+  padding: 10px;
+  border-radius: 100%;
+  border: none;
+}
+div div p {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

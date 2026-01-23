@@ -5,17 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
+      <img src="bilder/quizlogo.png" alt="" />
       <div></div>
-      <div></div>
-      <div></div>
+      <div>
+        <i
+          id="sun-button"
+          class="fa-solid fa-sun block"
+          onclick="themeLight()"
+        ></i>
+        <i
+          id="moon-button"
+          class="fa-solid fa-moon none moon"
+          onclick="themeDark()"
+        ></i>
+      </div>
     </header>
     <main>
-      <section></section>
-      <section class="lightM"></section>
+      <section>
+        <h1>00:00</h1>
+      </section>
+      <section>
+        <div class="questionContainer">
+          <div>
+            <h2>Spørsmål 1</h2>
+            <h3>
+              Hvilket HTML-element brukes for å lage den viktigste overskriften
+              på en nettside?
+            </h3>
+            <p><button onclick="sjekkSvar(false)"></button> < heading ></p>
+            <p><button onclick="sjekkSvar(true)"></button> < h1 ></p>
+            <p><button onclick="sjekkSvar(false)"></button> < title ></p>
+            <p><button onclick="sjekkSvar(false)"></button> < header ></p>
+          </div>
+          <div>
+            <h2>Spørsmål 2</h2>
+            <h3>Hvilket av disse er IKKE et ekte programmeringsspråk?</h3>
+            <p><button onclick="sjekkSvar(false)"></button>Python</p>
+            <p><button onclick="sjekkSvar(false)"></button>Java</p>
+            <p><button onclick="sjekkSvar(false)"></button>C++</p>
+            <p><button onclick="sjekkSvar(true)"></button>HyperScriptX</p>
+          </div>
+          <div>
+            <h2>Spørsmål 3</h2>
+            <h3>
+              Hvilken CSS-egenskap styrer avstanden mellom elementets innhold og
+              kanten (border)?
+            </h3>
+            <p><button onclick="sjekkSvar(false)"></button>margin</p>
+            <p><button onclick="sjekkSvar(false)"></button>padding</p>
+            <p><button onclick="sjekkSvar(true)"></button>border-spacing</p>
+            <p><button onclick="sjekkSvar(false)"></button>outline-offset</p>
+          </div>
+          <div>
+            <h2>Spørsmål 4</h2>
+            <h3>Hvilken selector har høyest spesifisitet?</h3>
+            <p><button onclick="sjekkSvar(false)"></button>.klasse navn</p>
+            <p><button onclick="sjekkSvar(true)"></button>#hovedmeny a</p>
+            <p><button onclick="sjekkSvar(false)"></button>div p span</p>
+            <p><button onclick="sjekkSvar(false)"></button>*[id="test"]</p>
+          </div>
+          <div>
+            <h2>Spørsmål 5</h2>
+            <h3>
+              Hvilken flex-egenskap gjør at barne-elementene fordeles jevnt med
+              lik avstand rundt seg?
+            </h3>
+            <p>
+              <button onclick="sjekkSvar(false)"></button>justify-content:
+              space-between;
+            </p>
+            <p>
+              <button onclick="sjekkSvar(true)"></button>justify-content:
+              center;
+            </p>
+            <p>
+              <button onclick="sjekkSvar(false)"></button>justify-content:
+              space-around;
+            </p>
+            <p>
+              <button onclick="sjekkSvar(false)"></button>justify-content:
+              space-evenly;
+            </p>
+          </div>
+          <div>
+            <h2>Spørsmål 6</h2>
+            <h3>Hva skrives ut i konsollen etter denne koden?</h3>
+            <img
+              src="bilder/Screenshot 2026-01-23 at 00.04.45.png"
+              id="question6"
+            />
+            <p><button onclick="sjekkSvar(false)"></button>5</p>
+            <p><button onclick="sjekkSvar(true)"></button>10</p>
+            <p><button onclick="sjekkSvar(false)"></button>undefined</p>
+            <p><button onclick="sjekkSvar(false)"></button>Feilmelding</p>
+          </div>
+          <div>
+            <h2>Spørsmål 7</h2>
+            <h3>Hvilken selector har høyest spesifisitet?</h3>
+            <img
+              src="bilder/Screenshot 2026-01-23 at 00.20.11.png"
+              id="question7"
+            />
+            <p><button onclick="sjekkSvar(false)"></button>Ola</p>
+            <p><button onclick="sjekkSvar(true)"></button>Kari</p>
+            <p><button onclick="sjekkSvar(false)"></button>Ola Kari</p>
+            <p><button onclick="sjekkSvar(false)"></button>Feilmelding</p>
+          </div>
+          <div>
+            <h2>Spørsmål 8</h2>
+            <h3>
+              Skriv JavaScript-koden som gjør at teksten i elementet med
+              id="tittel" endres til «Velkommen!» når siden lastes.
+            </h3>
+            <input type="text" />
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <script src="index.js"></script>
   </body>
 </html>
