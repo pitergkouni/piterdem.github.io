@@ -32,7 +32,14 @@
     </header>
     <main>
       <section>
-        <h1>00:00</h1>
+        <h1>Har du lyst til å teste deg selv på IT-kunnskap?</h1>
+        <div class="countdown-container">
+          <div class="countdown">
+            <span id="minutes">02</span>
+            <div class="separator">:</div>
+            <span id="seconds">00</span>
+          </div>
+        </div>
       </section>
       <section>
         <div class="questionContainer">
@@ -42,18 +49,24 @@
               Hvilket HTML-element brukes for å lage den viktigste overskriften
               på en nettside?
             </h3>
-            <p><button onclick="sjekkSvar(false)"></button> < heading ></p>
-            <p><button onclick="sjekkSvar(true)"></button> < h1 ></p>
-            <p><button onclick="sjekkSvar(false)"></button> < title ></p>
-            <p><button onclick="sjekkSvar(false)"></button> < header ></p>
+            <p>
+              <button onclick="sjekkSvar1(this, false)"></button> < heading >
+            </p>
+            <p><button onclick="sjekkSvar1(this, true)"></button> < h1 ></p>
+            <p><button onclick="sjekkSvar1(this, false)"></button> < title ></p>
+            <p>
+              <button onclick="sjekkSvar1(this, false)"></button> < header >
+            </p>
           </div>
           <div>
             <h2>Spørsmål 2</h2>
             <h3>Hvilket av disse er IKKE et ekte programmeringsspråk?</h3>
-            <p><button onclick="sjekkSvar(false)"></button>Python</p>
-            <p><button onclick="sjekkSvar(false)"></button>Java</p>
-            <p><button onclick="sjekkSvar(false)"></button>C++</p>
-            <p><button onclick="sjekkSvar(true)"></button>HyperScriptX</p>
+            <p><button onclick="sjekkSvar2(this, false)"></button>Python</p>
+            <p><button onclick="sjekkSvar2(this, false)"></button>Java</p>
+            <p><button onclick="sjekkSvar2(this, false)"></button>C++</p>
+            <p>
+              <button onclick="sjekkSvar2(this, true)"></button>HyperScriptX
+            </p>
           </div>
           <div>
             <h2>Spørsmål 3</h2>
@@ -61,18 +74,28 @@
               Hvilken CSS-egenskap styrer avstanden mellom elementets innhold og
               kanten (border)?
             </h3>
-            <p><button onclick="sjekkSvar(false)"></button>margin</p>
-            <p><button onclick="sjekkSvar(false)"></button>padding</p>
-            <p><button onclick="sjekkSvar(true)"></button>border-spacing</p>
-            <p><button onclick="sjekkSvar(false)"></button>outline-offset</p>
+            <p><button onclick="sjekkSvar3(this, false)"></button>margin</p>
+            <p><button onclick="sjekkSvar3(this, false)"></button>padding</p>
+            <p>
+              <button onclick="sjekkSvar3(this, true)"></button>border-spacing
+            </p>
+            <p>
+              <button onclick="sjekkSvar3(this, false)"></button>outline-offset
+            </p>
           </div>
           <div>
             <h2>Spørsmål 4</h2>
             <h3>Hvilken selector har høyest spesifisitet?</h3>
-            <p><button onclick="sjekkSvar(false)"></button>.klasse navn</p>
-            <p><button onclick="sjekkSvar(true)"></button>#hovedmeny a</p>
-            <p><button onclick="sjekkSvar(false)"></button>div p span</p>
-            <p><button onclick="sjekkSvar(false)"></button>*[id="test"]</p>
+            <p>
+              <button onclick="sjekkSvar4(this, false)"></button>.klasse navn
+            </p>
+            <p>
+              <button onclick="sjekkSvar4(this, true)"></button>#hovedmeny a
+            </p>
+            <p><button onclick="sjekkSvar4(this, false)"></button>div p span</p>
+            <p>
+              <button onclick="sjekkSvar4(this, false)"></button>*[id="test"]
+            </p>
           </div>
           <div>
             <h2>Spørsmål 5</h2>
@@ -81,20 +104,20 @@
               lik avstand rundt seg?
             </h3>
             <p>
-              <button onclick="sjekkSvar(false)"></button>justify-content:
-              space-between;
+              <button onclick="sjekkSvar5(this, false)"></button
+              >justify-content: space-between;
             </p>
             <p>
-              <button onclick="sjekkSvar(true)"></button>justify-content:
+              <button onclick="sjekkSvar5(this, true)"></button>justify-content:
               center;
             </p>
             <p>
-              <button onclick="sjekkSvar(false)"></button>justify-content:
-              space-around;
+              <button onclick="sjekkSvar5(this, false)"></button
+              >justify-content: space-around;
             </p>
             <p>
-              <button onclick="sjekkSvar(false)"></button>justify-content:
-              space-evenly;
+              <button onclick="sjekkSvar5(this, false)"></button
+              >justify-content: space-evenly;
             </p>
           </div>
           <div>
@@ -104,10 +127,12 @@
               src="bilder/Screenshot 2026-01-23 at 00.04.45.png"
               id="question6"
             />
-            <p><button onclick="sjekkSvar(false)"></button>5</p>
-            <p><button onclick="sjekkSvar(true)"></button>10</p>
-            <p><button onclick="sjekkSvar(false)"></button>undefined</p>
-            <p><button onclick="sjekkSvar(false)"></button>Feilmelding</p>
+            <p><button onclick="sjekkSvar6(this, false)"></button>5</p>
+            <p><button onclick="sjekkSvar6(this, true)"></button>10</p>
+            <p><button onclick="sjekkSvar6(this, false)"></button>undefined</p>
+            <p>
+              <button onclick="sjekkSvar6(this, false)"></button>Feilmelding
+            </p>
           </div>
           <div>
             <h2>Spørsmål 7</h2>
@@ -116,19 +141,27 @@
               src="bilder/Screenshot 2026-01-23 at 00.20.11.png"
               id="question7"
             />
-            <p><button onclick="sjekkSvar(false)"></button>Ola</p>
-            <p><button onclick="sjekkSvar(true)"></button>Kari</p>
-            <p><button onclick="sjekkSvar(false)"></button>Ola Kari</p>
-            <p><button onclick="sjekkSvar(false)"></button>Feilmelding</p>
+            <p><button onclick="sjekkSvar7(this, false)"></button>Ola</p>
+            <p><button onclick="sjekkSvar7(this, true)"></button>Kari</p>
+            <p><button onclick="sjekkSvar7(this, false)"></button>Ola Kari</p>
+            <p>
+              <button onclick="sjekkSvar7(this, false)"></button>Feilmelding
+            </p>
           </div>
           <div>
             <h2>Spørsmål 8</h2>
             <h3>
-              Skriv JavaScript-koden som gjør at teksten i elementet med
+              Skriv JavaScript-kommandoen som gjør at teksten i elementet med
               id="tittel" endres til «Velkommen!» når siden lastes.
             </h3>
             <input type="text" />
           </div>
+          <button onclick="fasit()">Ferdig</button>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div id="antallriktig"></div>
         </div>
       </section>
     </main>
