@@ -20,6 +20,7 @@ function themeLight() {
   questionContainer.style.color = "white";
   inputElm.style.backgroundColor = "#2c2c2c";
   inputElm.style.color = "white";
+  document.querySelector(".countdown-header").style.color = "white";
 }
 function themeDark() {
   sunButtonElm.classList.replace("none", "block");
@@ -31,6 +32,7 @@ function themeDark() {
   questionContainer.style.color = "black";
   inputElm.style.backgroundColor = "inherit";
   inputElm.style.color = "black";
+  document.querySelector(".countdown-header").style.color = "black";
 }
 function quizStart() {
   questionContainer.classList.remove("nonenormal");
