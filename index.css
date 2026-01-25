@@ -36,7 +36,6 @@ section:first-child {
   font-size: 30px;
   box-shadow: 0 0 100px black;
   text-align: center;
-  z-index: 2;
 }
 
 section:nth-child(2) {
@@ -44,7 +43,7 @@ section:nth-child(2) {
   display: flex;
   justify-content: center;
   background-color: white;
-  z-index: 1;
+  box-shadow: 0 0 100px;
 }
 .countdown-container {
   display: flex;
@@ -80,9 +79,10 @@ section:nth-child(2) {
   box-shadow: 0 0 20px gray;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding-block: 30px;
   width: 75%;
-  background-image: url(bilder/goldenheaderwhitelight.png);
+  background-image: url(bilder/goldenheaderwhitelight.jpg);
   background-size: cover;
 }
 h2 {
@@ -112,11 +112,11 @@ div img {
   border-radius: 13px;
   filter: invert(100%);
 }
-button {
+div button {
   padding: 10px;
   border-radius: 100%;
   border: none;
-  background-color: rgb(231, 231, 231);
+  background-color: gray;
 }
 div div p {
   display: flex;
@@ -141,4 +141,35 @@ input {
   width: 500px;
   text-align: center;
   padding: 10px;
+}
+#faq {
+  background-color: transparent;
+  transition: 0.2s;
+  font-size: 30px;
+}
+#faq:hover {
+  box-shadow: 0 0 40px;
+}
+#antallriktig {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+#antallriktig div {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  padding: 50px;
+}
+#antallriktig div h1 {
+  font-size: 120px;
+}
+.resultat {
+  color: rgb(198, 161, 69);
 }

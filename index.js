@@ -15,12 +15,14 @@ function themeLight() {
   sunButtonElm.classList.add("none");
   headerElm.style.filter = "invert(100%)";
   document.querySelector("main").style.filter = "invert(100%)";
+  document.querySelector("header img").style.filter = "opacity(0)";
 }
 function themeDark() {
   sunButtonElm.classList.replace("none", "block");
   moonButtonElm.classList.replace("block", "none");
   headerElm.style.filter = "invert(0%)";
   document.querySelector("main").style.filter = "invert(0%)";
+  document.querySelector("header img").style.filter = "opacity(1)";
 }
 function quizStart() {
   questionContainer.classList.remove("nonenormal");
@@ -45,7 +47,7 @@ function sjekkSvar1(x, svar1) {
   buttons[2].style.backgroundColor = "";
   buttons[3].style.backgroundColor = "";
   buttons[4].style.backgroundColor = "";
-  x.style.backgroundColor = "gray";
+  x.style.backgroundColor = "cyan";
   sporsmal1 = svar1;
 }
 function sjekkSvar2(x, svar2) {
@@ -54,7 +56,7 @@ function sjekkSvar2(x, svar2) {
   buttons[6].style.backgroundColor = "";
   buttons[7].style.backgroundColor = "";
   buttons[8].style.backgroundColor = "";
-  x.style.backgroundColor = "gray";
+  x.style.backgroundColor = "cyan";
   sporsmal2 = svar2;
 }
 function sjekkSvar3(x, svar3) {
@@ -63,7 +65,7 @@ function sjekkSvar3(x, svar3) {
   buttons[10].style.backgroundColor = "";
   buttons[11].style.backgroundColor = "";
   buttons[12].style.backgroundColor = "";
-  x.style.backgroundColor = "gray";
+  x.style.backgroundColor = "cyan";
   sporsmal3 = svar3;
 }
 function sjekkSvar4(x, svar4) {
@@ -72,7 +74,7 @@ function sjekkSvar4(x, svar4) {
   buttons[14].style.backgroundColor = "";
   buttons[15].style.backgroundColor = "";
   buttons[16].style.backgroundColor = "";
-  x.style.backgroundColor = "gray";
+  x.style.backgroundColor = "cyan";
   sporsmal4 = svar4;
 }
 function sjekkSvar5(x, svar5) {
@@ -81,7 +83,7 @@ function sjekkSvar5(x, svar5) {
   buttons[18].style.backgroundColor = "";
   buttons[19].style.backgroundColor = "";
   buttons[20].style.backgroundColor = "";
-  x.style.backgroundColor = "gray";
+  x.style.backgroundColor = "cyan";
   sporsmal5 = svar5;
 }
 function sjekkSvar6(x, svar6) {
@@ -90,7 +92,7 @@ function sjekkSvar6(x, svar6) {
   buttons[22].style.backgroundColor = "";
   buttons[23].style.backgroundColor = "";
   buttons[24].style.backgroundColor = "";
-  x.style.backgroundColor = "gray";
+  x.style.backgroundColor = "cyan";
   sporsmal6 = svar6;
 }
 function sjekkSvar7(x, svar7) {
@@ -99,11 +101,11 @@ function sjekkSvar7(x, svar7) {
   buttons[26].style.backgroundColor = "";
   buttons[27].style.backgroundColor = "";
   buttons[28].style.backgroundColor = "";
-  x.style.backgroundColor = "gray";
+  x.style.backgroundColor = "cyan";
   sporsmal7 = svar7;
 }
 
-const antallriktig = document.getElementById("antallriktig");
+const resultat = document.querySelector("#antallriktig .resultat");
 function fasit() {
   let z = 0;
   if (sporsmal1 == true) z += 1;
@@ -114,7 +116,14 @@ function fasit() {
   if (sporsmal6 == true) z += 1;
   if (sporsmal7 == true) z += 1;
   if (inputElm.value == sporsmal8Fasit) z += 1;
-  antallriktig.innerHTML = "Du fikk " + z + "/8 riktig";
+  clearInterval(interval);
+  document.getElementById("minutes").innerHTML = "00";
+  document.getElementById("seconds").innerHTML = "00";
+  document.getElementById("minutes-header").innerHTML = "00";
+  document.getElementById("seconds-header").innerHTML = "00";
+  document.getElementById("faq").innerText = "Scroll ned";
+  document.querySelector("section:last-of-type").classList.remove("nonenormal");
+  resultat.innerHTML = (z / 8) * 100 + "%";
 }
 
 let minutesElm = document.getElementById("minutes");
