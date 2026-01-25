@@ -13,30 +13,19 @@ startButtonElm = document.querySelector(".start");
 function themeLight() {
   moonButtonElm.classList.replace("none", "block");
   sunButtonElm.classList.add("none");
-  document.body.style.backgroundColor = "black";
-  imgSixElm.style.filter = "invert(0%)";
-  imgSevenElm.style.filter = "invert(0%)";
-  headerElm.style.backgroundColor = "black";
-  questionContainer.style.color = "white";
-  inputElm.style.backgroundColor = "#2c2c2c";
-  inputElm.style.color = "white";
-  document.querySelector(".countdown-header").style.color = "white";
+  headerElm.style.filter = "invert(100%)";
+  document.querySelector("main").style.filter = "invert(100%)";
 }
 function themeDark() {
   sunButtonElm.classList.replace("none", "block");
   moonButtonElm.classList.replace("block", "none");
-  document.body.style.backgroundColor = "white";
-  imgSixElm.style.filter = "invert(100%)";
-  imgSevenElm.style.filter = "invert(100%)";
-  headerElm.style.backgroundColor = "white";
-  questionContainer.style.color = "black";
-  inputElm.style.backgroundColor = "inherit";
-  inputElm.style.color = "black";
-  document.querySelector(".countdown-header").style.color = "black";
+  headerElm.style.filter = "invert(0%)";
+  document.querySelector("main").style.filter = "invert(0%)";
 }
 function quizStart() {
   questionContainer.classList.remove("nonenormal");
   startButtonElm.innerText = "Quizen har startet!";
+  document.querySelector("section:first-child").style.height = "800px";
 }
 function headerClock() {
   document.querySelector(".countdown-header").classList.remove("nonenormal");

@@ -15,7 +15,7 @@
   </head>
   <body>
     <header>
-      <img src="bilder/quizlogormv.png" alt="" />
+      <img src="#" alt="" />
       <div class="countdown-header nonenormal">
         <span id="minutes-header">02</span>
         <div class="separator-header">:</div>
@@ -29,7 +29,7 @@
         ></i>
         <i
           id="moon-button"
-          class="fa-solid fa-moon none moon"
+          class="fa-solid fa-moon none"
           onclick="themeDark()"
         ></i>
       </div>
@@ -51,7 +51,7 @@
               headerClock();
             "
           >
-            Start quizen nå
+            Du har 2 minutter på deg til å svare på alle spørsmålene. Start nå!
           </button>
         </div>
       </section>
@@ -63,24 +63,30 @@
               Hvilket HTML-element brukes for å lage den viktigste overskriften
               på en nettside?
             </h3>
-            <p>
-              <button onclick="sjekkSvar1(this, false)"></button> < heading >
-            </p>
-            <p><button onclick="sjekkSvar1(this, true)"></button> < h1 ></p>
-            <p><button onclick="sjekkSvar1(this, false)"></button> < title ></p>
-            <p>
-              <button onclick="sjekkSvar1(this, false)"></button> < header >
-            </p>
+            <div class="choices">
+              <p>
+                <button onclick="sjekkSvar1(this, false)"></button> < heading >
+              </p>
+              <p><button onclick="sjekkSvar1(this, true)"></button> < h1 ></p>
+              <p>
+                <button onclick="sjekkSvar1(this, false)"></button> < title >
+              </p>
+              <p>
+                <button onclick="sjekkSvar1(this, false)"></button> < header >
+              </p>
+            </div>
           </div>
           <div>
             <h2>Spørsmål 2</h2>
             <h3>Hvilket av disse er IKKE et ekte programmeringsspråk?</h3>
-            <p><button onclick="sjekkSvar2(this, false)"></button>Python</p>
-            <p><button onclick="sjekkSvar2(this, false)"></button>Java</p>
-            <p><button onclick="sjekkSvar2(this, false)"></button>C++</p>
-            <p>
-              <button onclick="sjekkSvar2(this, true)"></button>HyperScriptX
-            </p>
+            <div class="choices">
+              <p><button onclick="sjekkSvar2(this, false)"></button>Python</p>
+              <p><button onclick="sjekkSvar2(this, false)"></button>Java</p>
+              <p><button onclick="sjekkSvar2(this, false)"></button>C++</p>
+              <p>
+                <button onclick="sjekkSvar2(this, true)"></button>HyperScriptX
+              </p>
+            </div>
           </div>
           <div>
             <h2>Spørsmål 3</h2>
@@ -88,28 +94,35 @@
               Hvilken CSS-egenskap styrer avstanden mellom elementets innhold og
               kanten (border)?
             </h3>
-            <p><button onclick="sjekkSvar3(this, false)"></button>margin</p>
-            <p><button onclick="sjekkSvar3(this, false)"></button>padding</p>
-            <p>
-              <button onclick="sjekkSvar3(this, true)"></button>border-spacing
-            </p>
-            <p>
-              <button onclick="sjekkSvar3(this, false)"></button>outline-offset
-            </p>
+            <div class="choices">
+              <p><button onclick="sjekkSvar3(this, false)"></button>margin</p>
+              <p><button onclick="sjekkSvar3(this, false)"></button>padding</p>
+              <p>
+                <button onclick="sjekkSvar3(this, true)"></button>border-spacing
+              </p>
+              <p>
+                <button onclick="sjekkSvar3(this, false)"></button
+                >outline-offset
+              </p>
+            </div>
           </div>
           <div>
             <h2>Spørsmål 4</h2>
             <h3>Hvilken selector har høyest spesifisitet?</h3>
-            <p>
-              <button onclick="sjekkSvar4(this, false)"></button>.klasse navn
-            </p>
-            <p>
-              <button onclick="sjekkSvar4(this, true)"></button>#hovedmeny a
-            </p>
-            <p><button onclick="sjekkSvar4(this, false)"></button>div p span</p>
-            <p>
-              <button onclick="sjekkSvar4(this, false)"></button>*[id="test"]
-            </p>
+            <div class="choices">
+              <p>
+                <button onclick="sjekkSvar4(this, false)"></button>.klasse navn
+              </p>
+              <p>
+                <button onclick="sjekkSvar4(this, true)"></button>#hovedmeny a
+              </p>
+              <p>
+                <button onclick="sjekkSvar4(this, false)"></button>div p span
+              </p>
+              <p>
+                <button onclick="sjekkSvar4(this, false)"></button>*[id="test"]
+              </p>
+            </div>
           </div>
           <div>
             <h2>Spørsmål 5</h2>
@@ -117,22 +130,24 @@
               Hvilken flex-egenskap gjør at barne-elementene fordeles jevnt med
               lik avstand rundt seg?
             </h3>
-            <p>
-              <button onclick="sjekkSvar5(this, false)"></button
-              >justify-content: space-between;
-            </p>
-            <p>
-              <button onclick="sjekkSvar5(this, true)"></button>justify-content:
-              center;
-            </p>
-            <p>
-              <button onclick="sjekkSvar5(this, false)"></button
-              >justify-content: space-around;
-            </p>
-            <p>
-              <button onclick="sjekkSvar5(this, false)"></button
-              >justify-content: space-evenly;
-            </p>
+            <div class="choices">
+              <p>
+                <button onclick="sjekkSvar5(this, false)"></button
+                >justify-content: space-between;
+              </p>
+              <p>
+                <button onclick="sjekkSvar5(this, true)"></button
+                >justify-content: center;
+              </p>
+              <p>
+                <button onclick="sjekkSvar5(this, false)"></button
+                >justify-content: space-around;
+              </p>
+              <p>
+                <button onclick="sjekkSvar5(this, false)"></button
+                >justify-content: space-evenly;
+              </p>
+            </div>
           </div>
           <div>
             <h2>Spørsmål 6</h2>
@@ -141,12 +156,16 @@
               src="bilder/Screenshot 2026-01-23 at 00.04.45.png"
               id="question6"
             />
-            <p><button onclick="sjekkSvar6(this, false)"></button>5</p>
-            <p><button onclick="sjekkSvar6(this, true)"></button>10</p>
-            <p><button onclick="sjekkSvar6(this, false)"></button>undefined</p>
-            <p>
-              <button onclick="sjekkSvar6(this, false)"></button>Feilmelding
-            </p>
+            <div class="choices">
+              <p><button onclick="sjekkSvar6(this, false)"></button>5</p>
+              <p><button onclick="sjekkSvar6(this, true)"></button>10</p>
+              <p>
+                <button onclick="sjekkSvar6(this, false)"></button>undefined
+              </p>
+              <p>
+                <button onclick="sjekkSvar6(this, false)"></button>Feilmelding
+              </p>
+            </div>
           </div>
           <div>
             <h2>Spørsmål 7</h2>
@@ -155,12 +174,14 @@
               src="bilder/Screenshot 2026-01-23 at 00.20.11.png"
               id="question7"
             />
-            <p><button onclick="sjekkSvar7(this, false)"></button>Ola</p>
-            <p><button onclick="sjekkSvar7(this, true)"></button>Kari</p>
-            <p><button onclick="sjekkSvar7(this, false)"></button>Ola Kari</p>
-            <p>
-              <button onclick="sjekkSvar7(this, false)"></button>Feilmelding
-            </p>
+            <div class="choices">
+              <p><button onclick="sjekkSvar7(this, false)"></button>Ola</p>
+              <p><button onclick="sjekkSvar7(this, true)"></button>Kari</p>
+              <p><button onclick="sjekkSvar7(this, false)"></button>Ola Kari</p>
+              <p>
+                <button onclick="sjekkSvar7(this, false)"></button>Feilmelding
+              </p>
+            </div>
           </div>
           <div>
             <h2>Spørsmål 8</h2>

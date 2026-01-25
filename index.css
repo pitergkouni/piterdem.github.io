@@ -7,6 +7,9 @@ img {
   display: block;
   width: 100%;
 }
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 header {
   display: flex;
   align-items: center;
@@ -15,28 +18,33 @@ header {
   width: 100%;
   padding-inline: 50px;
   position: fixed;
-  background-color: white;
-  z-index: 1;
+  background-image: url(bilder/goldenheaderwhite.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  box-shadow: 0 0 50px;
 }
 section:first-child {
-  height: 800px;
-  border: 2px solid black;
-  background-image: url(https://wallpapercat.com/w/full/b/a/9/1209998-3840x2160-desktop-4k-glow-in-the-dark-background-photo.jpg);
-  background-position: center;
+  height: 100vh;
+  background-image: url(bilder/hexagonwhite.jpg);
+  background-position: start;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 30px;
+  box-shadow: 0 0 100px black;
+  text-align: center;
+  z-index: 2;
 }
 
 section:nth-child(2) {
   height: 100%;
-  border: 2px solid black;
   display: flex;
   justify-content: center;
+  background-color: white;
+  z-index: 1;
 }
 .countdown-container {
   display: flex;
@@ -54,12 +62,32 @@ section:nth-child(2) {
 .questionContainer {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  margin-top: 80px;
 }
-.questionContainer div {
+.questionContainer > div {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px gray;
+  justify-content: center;
+  align-items: center;
+  padding-block: 30px;
+  width: 75%;
+  background-image: url(bilder/goldenheaderwhite\ light.jpg);
+  background-size: cover;
+}
+h2 {
+  color: rgb(198, 161, 69);
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 15px;
 }
 .none {
   display: none !important;
@@ -69,9 +97,6 @@ section:nth-child(2) {
 }
 .block {
   display: block;
-}
-.moon {
-  color: white;
 }
 header img {
   width: 60px;
@@ -98,7 +123,7 @@ div div p {
   transition: 0.2s;
 }
 .start:hover {
-  box-shadow: 0 0 30px rgb(246, 143, 255);
+  box-shadow: 0 0 50px black;
 }
 #faq {
   border-radius: 10px;
