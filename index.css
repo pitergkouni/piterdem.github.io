@@ -10,6 +10,9 @@ img {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.fa-solid {
+  cursor: pointer;
+}
 header {
   display: flex;
   align-items: center;
@@ -111,6 +114,9 @@ div img {
   border: 1px solid rgb(75, 75, 75);
   border-radius: 13px;
   filter: invert(100%);
+}
+button {
+  cursor: pointer;
 }
 div button {
   padding: 10px;
