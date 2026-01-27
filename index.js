@@ -106,8 +106,10 @@ function sjekkSvar7(x, svar7) {
 }
 
 const resultat = document.querySelector("#antallriktig .resultat");
-function fasit() {
+function fasitSetup() {
   let z = 0;
+  let w = 0;
+  /*
   if (sporsmal1 == true) z += 1;
   if (sporsmal2 == true) z += 1;
   if (sporsmal3 == true) z += 1;
@@ -116,6 +118,7 @@ function fasit() {
   if (sporsmal6 == true) z += 1;
   if (sporsmal7 == true) z += 1;
   if (inputElm.value == sporsmal8Fasit) z += 1;
+  */
   clearInterval(interval);
   document.getElementById("minutes").innerHTML = "00";
   document.getElementById("seconds").innerHTML = "00";
@@ -123,7 +126,64 @@ function fasit() {
   document.getElementById("seconds-header").innerHTML = "00";
   document.getElementById("faq").innerText = "Scroll ned";
   document.querySelector("section:last-of-type").classList.remove("nonenormal");
+  if (sporsmal1 == true) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "Spørsmål 1 ";
+  }
+  if (sporsmal2 == true) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "<br>Spørsmål 2 ";
+  }
+  if (sporsmal3 == true) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "<br>Spørsmål 3 ";
+  }
+  if (sporsmal4 == true) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "<br>Spørsmål 4 ";
+  }
+  if (sporsmal5 == true) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "<br>Spørsmål 5 ";
+  }
+  if (sporsmal6 == true) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "<br>Spørsmål 6 ";
+  }
+  if (sporsmal7 == true) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "<br>Spørsmål 7 ";
+  }
+  if (inputElm.value == sporsmal8Fasit) {
+    z += 1;
+  } else {
+    w += 1;
+    document.querySelector(".feilene").innerHTML += "<br>Spørsmål 8";
+  }
+  if (z == 8) {
+    document.querySelector(".feilPa").style.display = "none";
+    document.querySelector("#antallriktig > div").style.gap = "0"
+  }
   resultat.innerHTML = (z / 8) * 100 + "%";
+}
+function fasit() {
+  document.querySelector(".resultat").innerHTML = "";
+  document.querySelector(".feilene").innerHTML = "";
+  fasitSetup();
 }
 
 let minutesElm = document.getElementById("minutes");
