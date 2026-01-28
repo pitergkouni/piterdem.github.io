@@ -24,6 +24,40 @@ function themeDark() {
   document.querySelector("main").style.filter = "invert(0%)";
   document.querySelector("header img").style.filter = "opacity(1)";
 }
+/*
+function english() {
+  document.querySelector(".translate2").classList.remove("nonenormal");
+  document.querySelector(".translate1").classList.add("nonenormal");
+  document.querySelectorAll(".en").classList.remove("nonenormal");
+  document.querySelectorAll(".no").classList.add("nonenormal");
+}
+function norwegian() {
+  document.querySelector(".translate1").classList.removie("nonenormal");
+  document.querySelector(".translate2").classList.add("nonenormal");
+  document.querySelectorAll(".no").classList.remove("nonenormal");
+  document.querySelectorAll(".en").classList.add("nonenormal");
+}
+*/
+function english() {
+  document.querySelector(".translate2").classList.remove("nonenormal");
+  document.querySelector(".translate1").classList.add("nonenormal");
+  document.querySelectorAll(".en").forEach(function (element) {
+    element.classList.remove("nonenormal");
+  });
+  document.querySelectorAll(".no").forEach(function (element) {
+    element.classList.add("nonenormal");
+  });
+}
+function norwegian() {
+  document.querySelector(".translate1").classList.remove("nonenormal");
+  document.querySelector(".translate2").classList.add("nonenormal");
+  document.querySelectorAll(".no").forEach(function (element) {
+    element.classList.remove("nonenormal");
+  });
+  document.querySelectorAll(".en").forEach(function (element) {
+    element.classList.add("nonenormal");
+  });
+}
 function quizStart() {
   questionContainer.classList.remove("nonenormal");
   startButtonElm.innerText = "Quizen har startet!";
@@ -176,7 +210,7 @@ function fasitSetup() {
   }
   if (z == 8) {
     document.querySelector(".feilPa").style.display = "none";
-    document.querySelector("#antallriktig > div").style.gap = "0"
+    document.querySelector("#antallriktig > div").style.gap = "0";
   }
   resultat.innerHTML = (z / 8) * 100 + "%";
 }

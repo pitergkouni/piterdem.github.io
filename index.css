@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  overflow-x: hidden;
+}
 img {
   display: block;
   width: 100%;
@@ -12,6 +15,15 @@ body {
 }
 .fa-solid {
   cursor: pointer;
+}
+.transDarkMode {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+header div img {
+  width: 30px;
+  border-radius: 0;
 }
 header {
   display: flex;
@@ -176,4 +188,99 @@ input {
 }
 .resultat {
   color: rgb(198, 161, 69);
+}
+.bilde6kort,
+.bilde7kort {
+  display: none;
+}
+@media (width < 950px) {
+  .bilde6,
+  .bilde7 {
+    display: none;
+  }
+  .bilde6kort,
+  .bilde7kort {
+    display: block;
+    width: 90%;
+  }
+  h3 {
+    width: 90%;
+  }
+  input {
+    width: 80%;
+  }
+  #antallriktig div {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .feilene {
+    width: 100%;
+  }
+}
+@media (width < 700px) {
+  h1.no,
+  h1.en {
+    font-size: 40px;
+    width: 80%;
+    text-align: center;
+  }
+  #antallriktig h1 {
+    width: 100%;
+  }
+  header {
+    padding-inline: 20px;
+  }
+  header img {
+    width: 50px;
+  }
+  .transDarkMode {
+    gap: 20px;
+  }
+  #minutes,
+  #seconds,
+  .separator {
+    font-size: 150px;
+  }
+}
+@media (width < 510px) {
+  #minutes,
+  #seconds,
+  .separator {
+    font-size: 120px;
+  }
+  h1.no,
+  h1.en {
+    font-size: 30px;
+  }
+}
+@media (width < 500px) {
+  .choices {
+    font-size: 13px;
+    gap: 10px;
+    width: 80%;
+    text-align: left;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .separator {
+    display: none;
+  }
+  #minutes,
+  #seconds {
+    font-size: 170px;
+  }
+  .countdown {
+    flex-direction: column;
+    line-height: 170px;
+  }
+  header button p {
+    width: 60%;
+  }
+  .feilene {
+    line-height: 25px;
+  }
+  #antallriktig div h1 {
+    font-size: 100px;
+  }
 }

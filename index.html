@@ -25,7 +25,17 @@
         <div class="separator-header">:</div>
         <span id="seconds-header">00</span>
       </div>
-      <div>
+      <div class="transDarkMode">
+        <img
+          class="translate1"
+          onclick="english()"
+          src="bilder/translateicon white.png"
+        />
+        <img
+          class="translate2 nonenormal"
+          onclick="norwegian()"
+          src="bilder/translateicon white.png"
+        />
         <i
           id="sun-button"
           class="fa-solid fa-sun block"
@@ -40,7 +50,12 @@
     </header>
     <main>
       <section>
-        <h1>Har du lyst til å teste deg selv på IT-kunnskap?</h1>
+        <h1 lang="no" class="no">
+          Har du lyst til å teste deg selv på IT-kunnskap?
+        </h1>
+        <h1 lang="en" class="en nonenormal">
+          Do you want to test yourself on IT knowledge?
+        </h1>
         <div class="countdown-container">
           <div class="countdown">
             <span id="minutes">02</span>
@@ -55,37 +70,59 @@
               headerClock();
             "
           >
-            2 minutter til å svare på alle spørsmålene. Start nå!
+            <p lang="no" class="no">
+              2 minutter til å svare på alle spørsmålene. Start nå!
+            </p>
+            <p lang="en" class="en nonenormal">
+              2 minutes to answer all the questions. Start now!
+            </p>
           </button>
         </div>
       </section>
       <section>
         <div class="questionContainer nonenormal">
           <div>
-            <h2>Spørsmål 1</h2>
-            <h3>Hva brukes HTML til?</h3>
+            <h2 lang="no" class="no">Spørsmål 1</h2>
+            <h2 lang="en" class="en nonenormal">Question 1</h2>
+            <h3 lang="no" class="no">Hva brukes HTML til?</h3>
+            <h3 lang="en" class="en nonenormal">What is HTML used for?</h3>
             <div class="choices">
               <p>
-                <button onclick="sjekkSvar1(this, false)"></button>Å lage
-                databaser
+                <button onclick="sjekkSvar1(this, false)"></button
+                ><span lang="no" class="no">Å create databaser</span
+                ><span lang="en" class="en nonenormal">To make datebases</span>
               </p>
               <p>
-                <button onclick="sjekkSvar1(this, true)"></button>Å strukturere
-                innhold på nettsider
+                <button onclick="sjekkSvar1(this, true)"></button
+                ><span lang="no" class="no"
+                  >Å strukturere innhold på nettsider</span
+                ><span lang="en" class="en nonenormal"
+                  >To structure content on websites</span
+                >
               </p>
               <p>
-                <button onclick="sjekkSvar1(this, false)"></button>Å programmere
-                spill
+                <button onclick="sjekkSvar1(this, false)"></button
+                ><span lang="no" class="no">Å programmere spill</span
+                ><span lang="en" class="en nonenormal"
+                  >To program videogames</span
+                >
               </p>
               <p>
-                <button onclick="sjekkSvar1(this, false)"></button>Å redigere
-                bilder
+                <button onclick="sjekkSvar1(this, false)"></button
+                ><span lang="no" class="no">Å redigere bilder</span
+                ><span lang="en" class="en nonenormal">To edit images</span>
               </p>
             </div>
           </div>
           <div>
-            <h2>Spørsmål 2</h2>
-            <h3>Hvilket av disse er IKKE et ekte programmeringsspråk?</h3>
+            <h2 lang="no" class="no">Spørsmål 2</h2>
+            <h2 lang="en" class="en nonenormal">Question 2</h2>
+            <h3 lang="no" class="no">
+              Hvilket av disse er IKKE et ekte programmeringsspråk?
+            </h3>
+            <h3 lang="en" class="en nonenormal">
+              Which one of these is NOT a real programming language
+            </h3>
             <div class="choices">
               <p><button onclick="sjekkSvar2(this, false)"></button>Python</p>
               <p><button onclick="sjekkSvar2(this, false)"></button>Java</p>
@@ -96,8 +133,10 @@
             </div>
           </div>
           <div>
-            <h2>Spørsmål 3</h2>
-            <h3>Hva står HTML for?</h3>
+            <h2 lang="no" class="no">Spørsmål 3</h2>
+            <h2 lang="en" class="en nonenormal">Question 3</h2>
+            <h3 lang="no" class="no">Hva står HTML for?</h3>
+            <h3 lang="en" class="en nonenormal">What does HTML stand for?</h3>
             <div class="choices">
               <p>
                 <button onclick="sjekkSvar3(this, false)"></button>Home Text
@@ -118,8 +157,14 @@
             </div>
           </div>
           <div>
-            <h2>Spørsmål 4</h2>
-            <h3>Hvilket attributt brukes for å angi hvor en lenke peker?</h3>
+            <h2 lang="no" class="no">Spørsmål 4</h2>
+            <h2 lang="en" class="en nonenormal">Question 4</h2>
+            <h3 lang="no" class="no">
+              Hvilket attributt brukes for å angi hvor en lenke peker?
+            </h3>
+            <h3 lang="en" class="en nonenormal">
+              Which attribute is used to specify where a link points?
+            </h3>
             <div class="choices">
               <p><button onclick="sjekkSvar4(this, false)"></button>src</p>
               <p><button onclick="sjekkSvar4(this, true)"></button>href</p>
@@ -128,10 +173,15 @@
             </div>
           </div>
           <div>
-            <h2>Spørsmål 5</h2>
-            <h3>
+            <h2 lang="no" class="no">Spørsmål 5</h2>
+            <h2 lang="en" class="en nonenormal">Question 5</h2>
+            <h3 lang="no" class="no">
               Hvilken CSS-egenskap brukes for å sentrere innhold horisontalt i
               en flexbox-container?
+            </h3>
+            <h3 lang="en" class="en nonenormal">
+              Which CSS property is used to center content horizontally in a
+              flexbox container?
             </h3>
             <div class="choices">
               <p>
@@ -153,11 +203,22 @@
             </div>
           </div>
           <div>
-            <h2>Spørsmål 6</h2>
-            <h3>Hva skrives ut i konsollen etter denne koden?</h3>
+            <h2 lang="no" class="no">Spørsmål 6</h2>
+            <h2 lang="en" class="en nonenormal">Question 6</h2>
+            <h3 lang="no" class="no">
+              Hva skrives ut i konsollen etter denne koden?
+            </h3>
+            <h3 lang="en" class="en nonenormal">
+              What is printed in the console after this code?
+            </h3>
             <img
+              class="bilde6"
               src="bilder/Screenshot 2026-01-23 at 00.04.45.png"
               id="question6"
+            />
+            <img
+              class="bilde6kort"
+              src="bilder/Screenshot 2026-01-23 at 00.04.45 copy.png"
             />
             <div class="choices">
               <p><button onclick="sjekkSvar6(this, false)"></button>5</p>
@@ -166,46 +227,74 @@
                 <button onclick="sjekkSvar6(this, false)"></button>undefined
               </p>
               <p>
-                <button onclick="sjekkSvar6(this, false)"></button>Feilmelding
+                <button onclick="sjekkSvar6(this, false)"></button
+                ><span lang="no" class="no">Feilmelding</span
+                ><span lang="en" class="en nonenormal">Error message</span>
               </p>
             </div>
           </div>
           <div>
-            <h2>Spørsmål 7</h2>
-            <h3>Hva skrives ut i konsollen etter denne koden?</h3>
+            <h2 lang="no" class="no">Spørsmål 7</h2>
+            <h2 lang="en" class="en nonenormal">Question 7</h2>
+            <h3 lang="no" class="no">
+              Hva skrives ut i konsollen etter denne koden?
+            </h3>
+            <h3 lang="en" class="en nonenormal">
+              What is printed in the console after this code?
+            </h3>
             <img
-              src="bilder/Screenshot 2026-01-23 at 00.20.11.png"
+              class="bilde7"
+              src="bilder/Screenshot 2026-01-28 at 01.10.36.png"
               id="question7"
+            />
+            <img
+              class="bilde7kort"
+              src="bilder/Screenshot 2026-01-28 at 01.10.36 copy.png"
             />
             <div class="choices">
               <p><button onclick="sjekkSvar7(this, false)"></button>Ola</p>
               <p><button onclick="sjekkSvar7(this, true)"></button>Kari</p>
               <p><button onclick="sjekkSvar7(this, false)"></button>Ola Kari</p>
               <p>
-                <button onclick="sjekkSvar7(this, false)"></button>Feilmelding
+                <button onclick="sjekkSvar7(this, false)"></button
+                ><span lang="no" class="no">Feilmelding</span
+                ><span lang="en" class="en nonenormal">Error message</span>
               </p>
             </div>
           </div>
           <div>
-            <h2>Spørsmål 8</h2>
-            <h3>
+            <h2 lang="no" class="no">Spørsmål 8</h2>
+            <h2 lang="en" class="en nonenormal">Question 8</h2>
+            <h3 lang="no" class="no">
               Skriv JavaScript-kommandoen som gjør at teksten i elementet med
               id="tittel" endres til «Velkommen!» når siden lastes.
             </h3>
+            <h3 lang="en" class="en nonenormal">
+              Write the JavaScript command that changes the text of the element
+              with id="tittel" to 'Welcome!' when the page loads.
+            </h3>
             <input type="text" />
           </div>
-          <button id="faq" onclick="fasit()">Lever svarene dine</button>
+          <button id="faq" onclick="fasit()">
+            <span lang="no" class="no">Lever svarene dine</span
+            ><span lang="en" class="en nonenormal">Submit your answers</span>
+          </button>
         </div>
       </section>
       <section class="nonenormal">
         <div id="antallriktig">
-          <h1>Resultater</h1> <!-- #antallriktig > div:last-child p -->
+          <h1 lang="no" class="no">Resultater</h1>
+          <!-- #antallriktig > div:last-child p -->
+          <h1 lang="en" class="en nonenormal">Results</h1>
           <div>
             <div>
               <h1 class="resultat"></h1>
             </div>
             <div>
-              <p class="feilPa">Feil på</p>
+              <p class="feilPa">
+                <span lang="no" class="no">Feil på</span
+                ><span lang="en" class="en nonenormal">Wrong on</span>
+              </p>
               <h3 class="feilene"></h3>
             </div>
           </div>
